@@ -1,0 +1,253 @@
+@import url("reset.css");
+
+body {
+  background-color: #000000;
+  margin: 0;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #33a8db;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+/* --- BANNER --- */
+
+.banner {
+  height: 605px;
+  border-bottom: 1px solid #33a8db;
+  /* Ajuste o background para ser mais robusto */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(49, 168, 221, 0.2),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../images/banner.png");
+  background-size: cover; /* Garante que a imagem cubra todo o banner */
+  background-position: center center; /* Centraliza a imagem */
+}
+
+.banner-content {
+  height: 100vh;
+  /* Alteramos de largura fixa (550px) para porcentagem/max-width */
+  max-width: 550px;
+  width: 90%;
+  padding-top: 56px;
+  margin: auto;
+  text-align: center;
+}
+
+.banner-content > .logo {
+  /* Manter tamanho fixo para o logo é OK */
+  width: 268px;
+  height: 268px;
+  background: #00000033;
+  border-radius: 50%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content > h1 {
+  background: linear-gradient(180deg, #33a8db 0%, #1472b7 100%);
+  /* Reduzimos o tamanho da fonte para telas menores, se necessário */
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  padding: 0 10px; /* Adiciona padding para não colar nas bordas */
+}
+
+.banner-content > p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.banner-content > button {
+  /* Mudar para max-width para que caiba em telas menores que 326px */
+  max-width: 326px;
+  width: 90%;
+  height: 57px;
+  margin-top: 1.3rem;
+
+  background: transparent;
+  border: 2px solid;
+  /* Simplificamos a borda para melhor compatibilidade */
+  border-color: #31a8dd;
+
+  color: #31a8dd;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.21em;
+  cursor: pointer;
+
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.banner-content > button:hover {
+  background: var(--primary-color);
+  color: var(--text-light);
+  border-color: var(--secondary-color);
+}
+
+.banner-content > button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* --- COURSE CONTENT --- */
+
+#course-content {
+  /* REMOVIDO: largura fixa (792px) e margens fixas */
+  max-width: 792px;
+  width: 90%;
+  margin: 100px auto; /* Centraliza o bloco */
+  padding: 0 15px; /* Adiciona padding interno */
+  text-align: center;
+}
+
+#course-content > h2 {
+  margin-bottom: 24px;
+}
+
+#course-content > p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+#course-content > .modules-list {
+  margin: 24px auto;
+  width: 100%; /* Ocupa a largura total do #course-content */
+}
+
+#course-content > .modules-list > .module {
+  border: 1px solid #33a8db;
+  background: #252525;
+  /* Alteramos de 530px fixo para porcentagem */
+  width: 100%;
+  max-width: 530px; /* Limite máximo para telas grandes */
+  height: auto; /* Altura automática */
+  padding: 16px;
+  border-radius: 57px;
+  margin: 0 auto 24px;
+  text-align: left; /* Alinhamento mais legível */
+  box-shadow: -2px 6px 4px 0px #00000066 inset;
+}
+
+#course-content > .modules-list > .module > span {
+  color: #33a8db;
+}
+
+/* --- TRANSFORM WORLD --- */
+
+#transform-world {
+  height: 400px;
+  border-top: 1px solid #33a8db;
+  border-bottom: 1px solid #33a8db;
+  padding: 118px 0; /* Padding vertical mantido */
+
+  /* Centraliza o background horizontalmente, mantendo-o fixo */
+  background-image: url("../images/woman-code.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right center; /* Posiciona a imagem para a direita */
+}
+
+#transform-world > p {
+  font-size: 40px;
+  font-weight: 900;
+  /* Mudar de largura fixa (244px) para max-width */
+  max-width: 244px;
+  text-transform: lowercase;
+  text-shadow: 3px 2px #33a8db;
+  /* Ajusta a margem para telas pequenas */
+  margin-left: 10%;
+}
+
+/* --- PROFESSIONAL CHALLENGES --- */
+
+#professional-challenges {
+  text-align: center;
+  /* Centraliza e usa porcentagem */
+  max-width: 792px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+#professional-challenges > img {
+  margin: 24px 0;
+  max-width: 100%; /* Garante que a imagem se ajuste à tela */
+  height: auto;
+}
+
+/* --- FOOTER --- */
+
+footer {
+  border-top: 1px solid #33a8db;
+  padding: 54px 0;
+  text-align: center;
+  height: auto; /* Deixa a altura se ajustar ao conteúdo */
+
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(49, 168, 221, 0.2)
+  );
+}
+
+footer > .dio-logo {
+  max-width: 310px;
+  width: 80%; /* Ajusta o tamanho do logo em telas menores */
+  margin: 0 auto 10px;
+}
+
+footer > p > a {
+  color: #33a8db;
+  text-decoration: none;
+}
+
+/* --- MEDIA QUERIES (Ajustes Fino para Telas Pequenas) --- */
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .banner-content > h1 {
+    font-size: 32px;
+  }
+
+  .banner-content > p {
+    font-size: 16px;
+  }
+
+  #transform-world {
+    /* Remove o padding fixo para a esquerda e centraliza o texto */
+    padding: 80px 15px;
+    text-align: center;
+    background-position: center center; /* Centraliza a imagem de fundo */
+  }
+
+  #transform-world > p {
+    font-size: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
